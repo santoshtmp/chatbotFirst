@@ -1,0 +1,160 @@
+actions:
+- action_country_general_info
+- action_covid
+- action_my_fallback
+- action_show_latest_news
+- action_weather_state
+- action_your_residence
+- utter_ask_battery
+- utter_ask_battery_backup
+- utter_ask_budget
+- utter_ask_camera
+- utter_ask_location
+- utter_ask_ram
+- utter_ask_storage_capacity
+- utter_cheer_up
+- utter_did_that_help
+- utter_fallback
+- utter_food_req_accept
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_wrong_battery
+- utter_wrong_battery_backup
+- utter_wrong_budget
+- utter_wrong_camera
+- utter_wrong_ram
+- utter_wrong_storage_capacity
+entities:
+- attribute
+- category
+- country
+- currency
+- food
+- phone_name
+- place
+- source_account
+forms:
+- product_search_form
+- weather_search_form
+intents:
+- latest_news
+- give_city_place
+- ask_weather
+- mood_great
+- weather_place_status
+- General_country_quest
+- deny
+- affirm
+- greet
+- covid19_case
+- goodbye
+- budget_available
+- buy_phone_laptop
+- give_information
+- bot_challenge
+- out_of_scope
+- mood_unhappy
+- check_balance
+- food_request
+- ask_residence:
+    triggers: action_your_residence
+responses:
+  utter_ask_battery:
+  - text: How much battery capacity are you looking for in the mobile?
+  utter_ask_battery_backup:
+  - text: Whats the minimum battery backup you are looking at?
+  utter_ask_budget:
+  - text: what's your budget for the product?
+  utter_ask_camera:
+  - text: What megapixel camera are you looking for?
+  utter_ask_location:
+  - text: At which place location you want to check weather details?
+  utter_ask_ram:
+  - text: How much GB RAM are you looking for?
+  utter_ask_storage_capacity:
+  - text: Whats the storage capacity you are looking for?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_conform_weather:
+  - buttons:
+    - payload: /ask_weather
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Are you looking for weather details?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_fallback:
+  - buttons:
+    - payload: /buy_phone_laptop{"category":"phone"}
+      title: Buy Phone
+    - payload: /buy_phone_laptop{"category":"laptop"}
+      title: Buy Laptop
+    - payload: /latest_news_phones_laptops{"category":"phone"}
+      title: Mobile news
+    - payload: /latest_news_phones_laptops{"category":"laptop"}
+      title: Laptop news
+    - payload: /goodbye
+      title: Goodbye
+    text: Sorry! I couldn't get you! Please use one of the following options.
+  utter_food_req_accept:
+  - text: okay ... that's great.. food
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_residence:
+  - text: I live in this app all day long to help u.
+  - text: The virtual world is my playground. I'm always here to help u.
+  - text: to help u. Right here in this app. Whenever you need me .
+  utter_submit:
+  - text: your input place is {name}
+  utter_wrong_battery:
+  - text: Please enter the vale for battery in mah
+  utter_wrong_battery_backup:
+  - text: Please enter correct value for battery backup (in hours).
+  utter_wrong_budget:
+  - text: Please enter the budget in usd below 4000
+  utter_wrong_camera:
+  - text: Please enter the correct value for camera in mp
+  utter_wrong_ram:
+  - text: Please enter corect RAM GB.
+  utter_wrong_storage_capacity:
+  - text: Please enter correct storage capacity in GBs.
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  attribute:
+    type: text
+  battery:
+    type: text
+  battery_backup:
+    type: text
+  budget:
+    type: text
+  camera:
+    type: text
+  category:
+    type: text
+  country:
+    type: text
+  food:
+    type: text
+  location:
+    type: text
+  place:
+    type: text
+  ram:
+    type: text
+  requested_slot:
+    type: unfeaturized
+  storage_capacity:
+    type: text
