@@ -132,3 +132,20 @@ def newsAPI(category):
 #     print(news['articles'][2]['title'])
 # else:
 #     print('No title')
+
+
+# Randomath [Add, Sub, Mult, Div]
+# https://rapidapi.com/s0ftik3/api/randomath?endpoint=apiendpoint_4861e068-7a62-415a-bf50-8cb52572042d
+def RandomMath(task):
+    url = "https://randomath.p.rapidapi.com/getRandom"+task
+    headers = {
+        'x-rapidapi-host': "randomath.p.rapidapi.com",
+        'x-rapidapi-key': "857458162fmshed714e4075c6415p1334a3jsn31fbef49ebfc"
+        }
+    response = requests.request("GET", url, headers=headers)
+    return response.json()
+#
+# url='Add' # [Add, Sub, Mult, Div]
+# print(RandomMath(url))
+
+

@@ -422,3 +422,6 @@ class ActionCountryGeneralInfo(Action):
 
         return [SlotSet("country", None), SlotSet('attribute', None)]
 
+
+
+

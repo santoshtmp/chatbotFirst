@@ -336,6 +336,16 @@
 - corona detail
 - [Qatar](country) covid case
 
+## intent:req_math_que
+- ask me math question
+- let's play math quiz
+- [addition]{"entity": "math_operation", "value": "add"}
+- [subtraction]{"entity": "math_operation", "value": "sub"}
+- [multiply]{"entity": "math_operation", "value": "mult"}
+- [division]{"entity": "math_operation", "value": "div"}
+- ask me add question
+- sub question
+
 ## synonym:25 mp
 - 25 megapixel
 

@@ -35,6 +35,7 @@ entities:
 - phone_name
 - place
 - source_account
+- math_operation
 forms:
 - product_search_form
 - weather_search_form
@@ -58,6 +59,7 @@ intents:
 - mood_unhappy
 - check_balance
 - food_request
+- req_math_que
 - ask_residence:
     triggers: action_your_residence
 responses:
